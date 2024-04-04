@@ -4,7 +4,7 @@
   "description": "about everyday gas price",
   "main": "app.ts",
   "scripts": {
-    "serve": "nodemon ",
+    "serve": "nodemon src/app.ts",
     "build": "tsc --project ./"
   },
   "author": "",
