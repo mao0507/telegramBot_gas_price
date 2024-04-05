@@ -20,6 +20,7 @@ export const get_cpc = async (messageId: number, chatId: number) => {
   str += `95 無鉛汽油 : ${d.sPrice2} \n`;
   str += `98 無鉛汽油 : ${d.sPrice3} \n`;
   str += `超級柴油 : ${d.sPrice5} \n`;
+  str += `價格如有變動，請依現場實際牌價為主 `;
   // str += `酒精汽油 : ${d.sPrice4} \n`;
   // str += `液化石油氣 : ${d.sPrice6} \n`;
 
