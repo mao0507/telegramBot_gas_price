@@ -30,8 +30,6 @@ const getStartDateTime = (htmlData: cheerio.Element) => {
 const getPrice = (product: string, htmlData: cheerio.Element) => {
   let str: string = '';
 
-  console.log('getPrice', htmlData);
-
   let price = '';
 
   for (let i = 0; i < htmlData.children.length; i++) {
@@ -39,7 +37,7 @@ const getPrice = (product: string, htmlData: cheerio.Element) => {
     if (p.name == 'span') {
       if (p.children.length > 0) {
         const text = p.children[0];
-        console.log(text.data);
+        // console.log(text.data);
         price = text.data;
       }
     }
@@ -61,6 +59,11 @@ const getPrice = (product: string, htmlData: cheerio.Element) => {
   return str;
 };
 
+/**
+ * 取得 網頁資料，解析需要的出來
+ * @param { number } messageId  訊息 Id
+ * @param { number } chatId  聊天 Id
+ */
 export const getNpc = async (messageId: number, chatId: number) => {
   const web = await npcWeb();
 
@@ -76,7 +79,7 @@ export const getNpc = async (messageId: number, chatId: number) => {
   const product: Array<string> = ['92', '95', '98', 'super'];
 
   product.forEach((x) => {
-    const priceHtml: cheerio.Element = $(`.oil-box[oil-num="${x}"] > p`)[1];
+    const priceHtml: cheerio.Element = $(`.oil-box[oil-num='${x}'] > p`)[1];
     str += getPrice('92', priceHtml);
   });
 

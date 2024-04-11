@@ -12,7 +12,7 @@ export const getCpc = async (messageId: number, chatId: number) => {
   const isDowngrade = d.UpOrDown_Html.includes('調降');
   const price = d.UpOrDown_Html.replace(/[^0-9.]/g, '');
 
-  let str: string = '台灣中油 資料取得成功 \n';
+  let str: string = '台灣中油 資料取得成功 \n\n';
   str += `單位：元/公升 \n`;
   str += `本週汽油價格 ${isDowngrade ? '調降' : '調漲'} ${price} \n`;
   str += `從 ${d.PriceUpdate} 零時起實施 \n`;
