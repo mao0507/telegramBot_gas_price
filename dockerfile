@@ -14,4 +14,4 @@ COPY . .
 EXPOSE 3000
 
 # 啟動應用
-CMD ["node", "app.js"]
+CMD ["node", "app.ts"]
