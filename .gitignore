@@ -1,12 +1,15 @@
 node_modules/*
 build/*
+dist/*
+
+
+# yarn 
+yarn/*
 .yarn/*
+.yamrc.*.yml
 
 # env
 .env
 .env.local
 .env.*.local
 
-# yarn 
-.yamrc.yml
-.yarn.lock
