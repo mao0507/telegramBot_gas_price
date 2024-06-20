@@ -1,19 +1,18 @@
 FROM node:18-alpine
 
 # 創建應用目錄
-WORKDIR /usr/src/app
+WORKDIR /app
 
-COPY package*.json ./
 
-RUN yarn 
+COPY package.json ./
+COPY tsconfig.json ./
+COPY src ./
 
-RUN yarn 
+# 
+RUN yarn && yarn install && yarn build
 
-# 複製應用源代碼
-COPY . .
+COPY node_modules ./
 
-# 暴露應用運行的端口
-EXPOSE 3000
 
 # 啟動應用
 CMD ["node", "app.ts"]
