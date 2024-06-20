@@ -7,6 +7,8 @@ COPY package*.json ./
 
 RUN yarn 
 
+RUN yarn 
+
 # 複製應用源代碼
 COPY . .
 

@@ -6,10 +6,13 @@ dist/*
 # yarn 
 yarn/*
 .yarn/*
-.yamrc.*.yml
+.yarnrc.*.yml
 
 # env
 .env
 .env.local
 .env.*.local
+
+#package
+package-lock
 
