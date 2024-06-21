@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "about everyday gas price",
   "main": "app.ts",
+  "type": "module",
   "scripts": {
     "serve": "nodemon src/app.ts",
     "build": "tsc --project ./ "
