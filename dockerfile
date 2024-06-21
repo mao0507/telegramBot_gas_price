@@ -14,7 +14,6 @@ RUN yarn && yarn install && yarn build
 # COPY node_modules ./
 COPY . .
 
-RUN cd dist
 
 # 啟動應用
-CMD ["node", "app.js"]
+CMD ["node", "./dist/app.js"]
